@@ -1,0 +1,17 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main (void)
+{
+//Requesting a number from user
+    int n = get_int("n: ");
+
+//Checks through the remainder if the number submitted is even or odd
+    if(n % 2 == 0)
+    {
+        printf("even\n");
+    }
+    else{
+        printf("odd\n");
+    }
+}
