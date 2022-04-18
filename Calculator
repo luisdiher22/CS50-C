@@ -1,0 +1,14 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    //Requests a first number from the user
+    long x = get_long("x: ");
+
+    //Requests a second number from the user
+    long y = get_long("y; ");
+
+    // Prints a long which will be the sum of x and y
+    printf("%li\n", x + y);
+}
