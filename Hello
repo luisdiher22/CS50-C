@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <cs50.h> //Required to use get_string
+
+int main(void)
+{
+    string answer = get_string("What's your name?");
+    printf("hello, %s\n", answer); //%s\n used as a placeholder
+}
