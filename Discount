@@ -1,0 +1,16 @@
+#include <cs50.h>
+#include <stdio.h>
+
+//A function that takes two values, the price of the item and the discount
+float discount(float price, int percentage)
+{
+    return price * (100 - percentage) / 100;
+}
+//Requests the information required for the function to the user
+int main (void)
+{
+    float regular = get_float("Regular Price: ");
+    int percent_off = get_int("Percent Off: ");
+    float sale = discount(regular, percent_off);
+    printf("Sale price: %.2f\n", sale);
+}
