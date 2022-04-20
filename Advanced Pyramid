@@ -1,0 +1,42 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+//Declaring variables for heigth and width of the pyramid
+    int height;
+    int row;
+    int column;
+    int space;
+
+//Do while statement, in which we only accept an answer from 1 to 8
+    do
+    {
+        height = get_int("Height:");
+    }
+    while (height < 1  ||  height > 8);
+
+//Nested loops, one in charge of height and one of width
+
+    for (row = 0; row < height; row++)
+    {
+        for (space = 0; space < height - row - 1; space++)
+        {
+            printf(" ");
+        }
+
+        for (column = 0; column <= row; column++)
+        {
+
+            printf("#");
+        }
+        //Since the spaces on the middle of the pyramid are always 2 , no need for anything fancy
+        printf("  ");
+        //Exactly the same third loop as in the first pyramid, first pyramid is in charge of moving the line downwards
+        for (column = 0; column <= row; column++)
+        {
+
+            printf("#");
+        }
+        printf("\n");
+    }
